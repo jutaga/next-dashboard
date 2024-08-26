@@ -1,4 +1,11 @@
 import { PokemonGrid, PokemonsResponse, SimplePokemon } from "@/pokemons";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "151 Pokemons",
+  description:
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, blanditiis asperiores. Sapiente molestias illum commodi autem, rerum, sint voluptatibus consequatur labore excepturi quo quasi voluptas? Veritatis neque dolor quisquam ullam.",
+};
 
 const getPokemons = async (
   limit = 20,
@@ -12,7 +19,6 @@ const getPokemons = async (
     id: pokemon.url.split("/").at(-2)!,
     name: pokemon.name,
   }));
-
 
   return pokemons;
 };
